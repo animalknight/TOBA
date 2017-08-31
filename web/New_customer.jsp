@@ -11,23 +11,25 @@
         <title>Sign Up</title>
     </head>
     <body>
-        <form action="newCustomer" method="post">
+        <form action="signup" method="post">
             <label>First Name:</label>
-            <input type="text" name="firstName" required><br>
+            <input type="text" name="firstName" value="${user.firstname}"><br>
             <label>Last Name:</label>
-            <input type="text" name="lastName" required><br>
+            <input type="text" name="lastName" value="${user.lastname}"><br>
             <label>Phone Number: </label>
-            <input name="phoneNumber" required><br>
+            <input name="phoneNumber" value="${user.phonenumber}"><br>
             <label>Address: </label>
-            <input name="address" required><br>
+            <input name="address" value="${user.address}"><br>
             <label>City: </label>
-            <input type="text" name="city" required><br>
+            <input type="text" name="city" value="${user.city}"><br>
             <label>State: </label>
-            <input type="text" name="state" required><br>
+            <input type="text" name="state" value="${user.state}"><br>
             <label>Zip Code: </label>
-            <input name="zipCode" required><br>
+            <input name="zipCode" value="${user.zipcode}"><br>
             <label>Email: </label>
-            <input type="email" name="email" required><br><br>
+            <input type="email" name="email" value="${user.email}"><br><br>
+            
+            <p>${message}</p><br><br>
             
             <input type="submit" value="Sign Up" id="submit">
         </form>

@@ -1,3 +1,5 @@
+package servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author David K
  */
-@WebServlet(urlPatterns = {"/NewCustomerServlet"})
-public class NewCustomerServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/TransactionServlet"})
+public class TransactionServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,10 +38,10 @@ public class NewCustomerServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet NewCustomerServlet</title>");            
+            out.println("<title>Servlet TransactionServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet NewCustomerServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet TransactionServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -72,17 +74,6 @@ public class NewCustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String phoneNumber = request.getParameter("phoneNumber");
-        String address = request.getParameter("address");
-        String city = request.getParameter("city");
-        String state = request.getParameter("state");
-        String zipCode = request.getParameter("zipCode");
-        String email = request.getParameter("email");
-        
-        
     }
 
     /**
